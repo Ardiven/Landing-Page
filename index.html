@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -95,7 +96,7 @@
 </head>
 <body class="font-poppins text-dark">
     <!-- Navbar -->
-    <nav class="bg-white fixed w-full z-10 shadow-md transition-all duration-300" id="navbar">
+    <nav class="bg-white fixed w-full z-50 shadow-md transition-all duration-300" id="navbar">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
                 <a class="flex items-center space-x-2" href="#">
@@ -136,7 +137,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-gradient-to-br from-primary/5 to-primary/20 relative overflow-hidden">
+    <section class="pt-32 pb-20 z-10 bg-gradient-to-br from-primary/5 to-primary/20 relative overflow-hidden">
         <!-- Abstract design elements -->
         <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-accent/10 filter blur-3xl"></div>
         <div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-96 h-96 rounded-full bg-primary/10 filter blur-3xl"></div>
@@ -188,20 +189,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="lg:w-1/2 relative animate-fadeIn" style="animation-delay: 0.3s;">
+                <div class="lg:w-1/2 relative animate-fadeIn" style="animation-delay: 1s;">
                     <div class="relative z-10">
-                        <img src="https://via.placeholder.com/600x400" class="rounded-xl shadow-xl w-full" alt="Fotoin App Demo">
+                        <img src="https://i.pinimg.com/736x/f0/70/c7/f070c7958f5e2d99948436fde09839ed.jpg" class="rounded-xl shadow-xl w-full" alt="Fotoin App Demo">
                     </div>
                     <!-- Decorative elements -->
-                    <div class="absolute top-10 -right-10 bg-accent p-4 rounded-lg shadow-lg z-20">
+                    <div class="absolute top-4 right-4 bg-accent px-3 py-2 rounded-lg shadow-lg z-20">
                         <div class="flex items-center space-x-2">
-                            <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                                <i class="fas fa-star text-accent text-xs"></i>
-                            </div>
-                            <span class="text-white font-medium">4.9/5.0 Rating</span>
+                        <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-star text-accent text-xs"></i>
                         </div>
+                        <span class="text-white text-sm font-medium">4.9/5.0 Rating</span>
                     </div>
-                    <div class="absolute bottom-10 -left-6 bg-white p-3 rounded-lg shadow-lg z-20 animate-bounce" style="animation-duration: 3s">
+
+                    </div>
+                    <div class="absolute bottom-10 lg:-left-6 md: -left-5 bg-white p-3 rounded-lg shadow-lg z-20 animate-bounce md-h-10" style="animation-duration: 3s">
                         <div class="flex items-center space-x-2">
                             <i class="fas fa-camera text-primary"></i>
                             <span class="font-medium">Booking Instan</span>
@@ -216,26 +218,17 @@
     </section>
 
     <!-- Trusted By Section -->
-    <section class="py-12 bg-white">
+    <section class="py-10 bg-white">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-8">
+            <div class="text-center mb-2">
                 <p class="text-gray-500 font-medium">DIPERCAYA OLEH</p>
             </div>
             <div class="flex flex-wrap justify-center items-center">
-                <div class="p-4 grayscale hover:grayscale-0 transition-all">
-                    <img src="https://via.placeholder.com/120x40" alt="Brand Logo" class="h-8">
+                <div class="p-2 grayscale hover:grayscale-0 transition-all">
+                    <img src="https://pbs.twimg.com/profile_images/1656207237801705473/1_E-FKq7_400x400.jpg" alt="Brand Logo" class="h-40">
                 </div>
-                <div class="p-4 grayscale hover:grayscale-0 transition-all">
-                    <img src="https://via.placeholder.com/120x40" alt="Brand Logo" class="h-8">
-                </div>
-                <div class="p-4 grayscale hover:grayscale-0 transition-all">
-                    <img src="https://via.placeholder.com/120x40" alt="Brand Logo" class="h-8">
-                </div>
-                <div class="p-4 grayscale hover:grayscale-0 transition-all">
-                    <img src="https://via.placeholder.com/120x40" alt="Brand Logo" class="h-8">
-                </div>
-                <div class="p-4 grayscale hover:grayscale-0 transition-all">
-                    <img src="https://via.placeholder.com/120x40" alt="Brand Logo" class="h-8">
+                <div class="p-2 grayscale hover:grayscale-0 transition-all">
+                    <img src="3.png" alt="Brand Logo" class="h-40">
                 </div>
             </div>
         </div>
@@ -248,7 +241,7 @@
                 <div class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full mb-4 font-medium text-sm">
                     FITUR UTAMA
                 </div>
-                <h2 class="text-3xl font-bold mb-4">Kenapa Harus Menggunakan <span class="text-primary">Fotoin</span>?</h2>
+                <h2 class="text-3xl font-bold mb-4">Kenapa Harus Menggunakan <span class="text-primary">Foto</span><span class="text-accent">in</span>?</h2>
                 <p class="text-lg text-gray-600">Nikmati kemudahan dan kenyamanan dalam memesan jasa fotografer profesional dengan berbagai fitur unggulan</p>
             </div>
             
@@ -260,14 +253,7 @@
                     </div>
                     <h4 class="text-xl font-semibold mb-3">Cari Fotografer Terdekat</h4>
                     <p class="text-gray-600">Temukan fotografer berkualitas di sekitar Anda sesuai gaya fotografi yang diinginkan dengan filter pencarian canggih</p>
-                    <div class="mt-6 pt-6 border-t border-gray-100">
-                        <a href="#" class="text-primary hover:text-primaryDark font-medium inline-flex items-center">
-                            <span>Pelajari Lebih Lanjut</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
+                  
                 </div>
                 
                 <!-- Feature 2 -->
@@ -277,14 +263,7 @@
                     </div>
                     <h4 class="text-xl font-semibold mb-3">Pembayaran Aman</h4>
                     <p class="text-gray-600">Sistem escrow menjamin keamanan pembayaran Anda hingga layanan selesai diterima dengan berbagai metode pembayaran</p>
-                    <div class="mt-6 pt-6 border-t border-gray-100">
-                        <a href="#" class="text-primary hover:text-primaryDark font-medium inline-flex items-center">
-                            <span>Pelajari Lebih Lanjut</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
+                  
                 </div>
                 
                 <!-- Feature 3 -->
@@ -294,14 +273,7 @@
                     </div>
                     <h4 class="text-xl font-semibold mb-3">Ulasan Jujur & Portofolio</h4>
                     <p class="text-gray-600">Lihat portofolio lengkap dan baca ulasan terverifikasi dari pengguna sebelum memutuskan fotografer pilihan</p>
-                    <div class="mt-6 pt-6 border-t border-gray-100">
-                        <a href="#" class="text-primary hover:text-primaryDark font-medium inline-flex items-center">
-                            <span>Pelajari Lebih Lanjut</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
+                   
                 </div>
                 
                 <!-- Feature 4 -->
@@ -311,14 +283,7 @@
                     </div>
                     <h4 class="text-xl font-semibold mb-3">Chat Langsung</h4>
                     <p class="text-gray-600">Diskusikan detail sesi foto langsung dengan fotografer pilihan Anda melalui platform chat yang aman dan cepat</p>
-                    <div class="mt-6 pt-6 border-t border-gray-100">
-                        <a href="#" class="text-primary hover:text-primaryDark font-medium inline-flex items-center">
-                            <span>Pelajari Lebih Lanjut</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
+                  
                 </div>
                 
                 <!-- Feature 5 -->
@@ -328,14 +293,7 @@
                     </div>
                     <h4 class="text-xl font-semibold mb-3">Layanan Foto Lengkap</h4>
                     <p class="text-gray-600">Tersedia berbagai layanan fotografi mulai dari wisuda, prewedding, event, produk, keluarga hingga foto profil profesional</p>
-                    <div class="mt-6 pt-6 border-t border-gray-100">
-                        <a href="#" class="text-primary hover:text-primaryDark font-medium inline-flex items-center">
-                            <span>Pelajari Lebih Lanjut</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
+                   
                 </div>
                 
                 <!-- Feature 6 -->
@@ -345,14 +303,7 @@
                     </div>
                     <h4 class="text-xl font-semibold mb-3">Booking Instan</h4>
                     <p class="text-gray-600">Proses booking cepat dengan konfirmasi instan tanpa perlu menunggu lama dan dapat disesuaikan dengan jadwal Anda</p>
-                    <div class="mt-6 pt-6 border-t border-gray-100">
-                        <a href="#" class="text-primary hover:text-primaryDark font-medium inline-flex items-center">
-                            <span>Pelajari Lebih Lanjut</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -373,7 +324,7 @@
                 <!-- Category 1 -->
                 <div class="group hover-scale">
                     <div class="relative rounded-xl overflow-hidden aspect-square shadow">
-                        <img src="https://via.placeholder.com/300x300" alt="Wedding Photography" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <img src="https://i.pinimg.com/736x/f8/cf/ae/f8cfaecd2f9cd01a8d04f8be670990d5.jpg" alt="Wedding Photography" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-dark/0"></div>
                         <div class="absolute bottom-0 left-0 p-4 text-white">
                             <h4 class="font-semibold">Wedding</h4>
@@ -384,7 +335,7 @@
                 <!-- Category 2 -->
                 <div class="group hover-scale">
                     <div class="relative rounded-xl overflow-hidden aspect-square shadow">
-                        <img src="https://via.placeholder.com/300x300" alt="Graduation Photography" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <img src="https://i.pinimg.com/736x/e4/25/0e/e4250e33b80e39b41cec68a6c79f62d5.jpg" alt="Graduation Photography" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-dark/0"></div>
                         <div class="absolute bottom-0 left-0 p-4 text-white">
                             <h4 class="font-semibold">Wisuda</h4>
@@ -395,7 +346,7 @@
                 <!-- Category 3 -->
                 <div class="group hover-scale">
                     <div class="relative rounded-xl overflow-hidden aspect-square shadow">
-                        <img src="https://via.placeholder.com/300x300" alt="Product Photography" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <img src="https://i.pinimg.com/736x/55/f3/94/55f394aeccc01051ce97f761eb8f45d0.jpg" alt="Product Photography" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-dark/0"></div>
                         <div class="absolute bottom-0 left-0 p-4 text-white">
                             <h4 class="font-semibold">Produk</h4>
@@ -406,7 +357,7 @@
                 <!-- Category 4 -->
                 <div class="group hover-scale">
                     <div class="relative rounded-xl overflow-hidden aspect-square shadow">
-                        <img src="https://via.placeholder.com/300x300" alt="Family Photography" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <img src="https://i.pinimg.com/736x/f9/f1/7b/f9f17bc72e5707cee35cf7f676cdac94.jpg" alt="Family Photography" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-dark/0"></div>
                         <div class="absolute bottom-0 left-0 p-4 text-white">
                             <h4 class="font-semibold">Keluarga</h4>
@@ -417,7 +368,7 @@
                 <!-- Category 5 -->
                 <div class="group hover-scale">
                     <div class="relative rounded-xl overflow-hidden aspect-square shadow">
-                        <img src="https://via.placeholder.com/300x300" alt="Event Photography" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <img src="https://i.pinimg.com/736x/c6/32/64/c63264ce8535800623e10d126dffe40a.jpg" alt="Event Photography" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-dark/0"></div>
                         <div class="absolute bottom-0 left-0 p-4 text-white">
                             <h4 class="font-semibold">Event</h4>
@@ -428,7 +379,7 @@
                 <!-- Category 6 -->
                 <div class="group hover-scale">
                     <div class="relative rounded-xl overflow-hidden aspect-square shadow">
-                        <img src="https://via.placeholder.com/300x300" alt="Portrait Photography" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <img src="https://i.pinimg.com/736x/f0/ad/59/f0ad59f31fd6a280a90b736e2d1769cc.jpg" alt="Portrait Photography" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-dark/0"></div>
                         <div class="absolute bottom-0 left-0 p-4 text-white">
                             <h4 class="font-semibold">Portrait</h4>
@@ -462,7 +413,7 @@
                         </div>
                         <h4 class="text-xl font-semibold mb-3">Cari Fotografer</h4>
                         <p class="text-gray-600">Pilih berdasarkan lokasi, kategori, jenis sesi foto, dan gaya visual yang Anda inginkan</p>
-                        <img src="https://via.placeholder.com/250x150" alt="Search for Photographer" class="mt-6 mx-auto rounded-lg">
+                        <!-- <img src="https://via.placeholder.com/250x150" alt="Search for Photographer" class="mt-6 mx-auto rounded-lg"> -->
                     </div>
                     <!-- Mobile arrow -->
                     <div class="flex justify-center md:hidden mt-4">
@@ -478,7 +429,7 @@
                         </div>
                         <h4 class="text-xl font-semibold mb-3">Pesan & Bayar Aman</h4>
                         <p class="text-gray-600">Konfirmasi tanggal, diskusikan konsep, dan lakukan pembayaran aman melalui sistem escrow</p>
-                        <img src="https://via.placeholder.com/250x150" alt="Book and Pay Securely" class="mt-6 mx-auto rounded-lg">
+                        <!-- <img src="" alt="Book and Pay Securely" class="mt-6 mx-auto rounded-lg"> -->
                     </div>
                     <!-- Mobile arrow -->
                     <div class="flex justify-center md:hidden mt-4">
@@ -494,7 +445,7 @@
                         </div>
                         <h4 class="text-xl font-semibold mb-3">Foto & Terima Hasil</h4>
                         <p class="text-gray-600">Nikmati sesi foto, review hasil, dan download file dengan kualitas tinggi lewat aplikasi</p>
-                        <img src="https://via.placeholder.com/250x150" alt="Get Your Photos" class="mt-6 mx-auto rounded-lg">
+                        <!-- <img src="https://via.placeholder.com/250x150" alt="Get Your Photos" class="mt-6 mx-auto rounded-lg"> -->
                     </div>
                 </div>
             </div>
@@ -510,110 +461,90 @@
 
     <!-- Testimonials Section -->
     <!-- Testimonial Section -->
-<section class="py-16 bg-white">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-12">Apa Kata Mereka?</h2>
+    <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Apa Kata Mereka?</h2>
 
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Testimonial Card -->
-      <div class="bg-gray-50 p-6 rounded-2xl shadow">
-        <p class="text-gray-700 italic">"Pelayanan fotografernya cepat dan hasil fotonya keren banget! Aku bakal order lagi buat acara keluarga nanti."</p>
-        <div class="mt-4 flex items-center">
-          <img src="https://i.pravatar.cc/40?img=11" class="rounded-full w-10 h-10 mr-3" />
-          <div>
-            <p class="font-semibold">Nadya Aulia</p>
-            <p class="text-sm text-gray-500">Customer</p>
-          </div>
+        <div class="grid md:grid-cols-3 gap-8">
+        <!-- Testimonial Card -->
+        <div class="bg-gray-50 p-6 rounded-2xl shadow">
+            <p class="text-gray-700 italic">"Pelayanan fotografernya cepat dan hasil fotonya keren banget! Aku bakal order lagi buat acara keluarga nanti."</p>
+            <div class="mt-4 flex items-center">
+            <img src="https://i.pravatar.cc/40?img=5" class="rounded-full w-10 h-10 mr-3" />
+            <div>
+                <p class="font-semibold">Nadya Aulia</p>
+                <p class="text-sm text-gray-500">Customer</p>
+            </div>
+            </div>
         </div>
-      </div>
 
-      <div class="bg-gray-50 p-6 rounded-2xl shadow">
-        <p class="text-gray-700 italic">"Platform ini bantu aku dapet client terus tiap bulan. Simple banget cara setting paketnya."</p>
-        <div class="mt-4 flex items-center">
-          <img src="https://i.pravatar.cc/40?img=32" class="rounded-full w-10 h-10 mr-3" />
-          <div>
-            <p class="font-semibold">Steven Hartanto</p>
-            <p class="text-sm text-gray-500">Fotografer</p>
-          </div>
+        <div class="bg-gray-50 p-6 rounded-2xl shadow">
+            <p class="text-gray-700 italic">"Platform ini bantu aku dapet client terus tiap bulan. Simple banget cara setting paketnya."</p>
+            <div class="mt-4 flex items-center">
+            <img src="https://i.pravatar.cc/40?img=32" class="rounded-full w-10 h-10 mr-3" />
+            <div>
+                <p class="font-semibold">Steven Hartanto</p>
+                <p class="text-sm text-gray-500">Fotografer</p>
+            </div>
+            </div>
         </div>
-      </div>
 
-      <div class="bg-gray-50 p-6 rounded-2xl shadow">
-        <p class="text-gray-700 italic">"Sistem booking dan negosiasinya bikin semuanya transparan. Gak perlu bolak-balik chat panjang lebar."</p>
-        <div class="mt-4 flex items-center">
-          <img src="https://i.pravatar.cc/40?img=5" class="rounded-full w-10 h-10 mr-3" />
-          <div>
-            <p class="font-semibold">Jonathan Pranata</p>
-            <p class="text-sm text-gray-500">Customer</p>
-          </div>
+        <div class="bg-gray-50 p-6 rounded-2xl shadow">
+            <p class="text-gray-700 italic">"Sistem booking dan negosiasinya bikin semuanya transparan. Gak perlu bolak-balik chat panjang lebar."</p>
+            <div class="mt-4 flex items-center">
+            <img src="https://i.pravatar.cc/40?img=11" class="rounded-full w-10 h-10 mr-3" />
+            <div>
+                <p class="font-semibold">Jonathan Pranata</p>
+                <p class="text-sm text-gray-500">Customer</p>
+            </div>
+            </div>
         </div>
-      </div>
+        </div>
     </div>
-  </div>
-</section>
-<!-- Quick Stats Section -->
-<section class="bg-white py-16">
-  <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-      <div>
-        <h3 class="text-4xl font-bold text-primary">150+</h3>
-        <p class="text-gray-600 mt-2">Fotografer Tergabung</p>
-      </div>
-      <div>
-        <h3 class="text-4xl font-bold text-primary">1.200+</h3>
-        <p class="text-gray-600 mt-2">Pemotretan Berhasil</p>
-      </div>
-      <div>
-        <h3 class="text-4xl font-bold text-primary">4.9/5</h3>
-        <p class="text-gray-600 mt-2">Rating Pelanggan</p>
-      </div>
+    </section>
+    <!-- Quick Stats Section -->
+    <section class="bg-white py-16">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+        <div>
+            <h3 class="text-4xl font-bold text-primary">150+</h3>
+            <p class="text-gray-600 mt-2">Fotografer Tergabung</p>
+        </div>
+        <div>
+            <h3 class="text-4xl font-bold text-primary">1.200+</h3>
+            <p class="text-gray-600 mt-2">Pemotretan Berhasil</p>
+        </div>
+        <div>
+            <h3 class="text-4xl font-bold text-primary">4.9/5</h3>
+            <p class="text-gray-600 mt-2">Rating Pelanggan</p>
+        </div>
+        </div>
     </div>
-  </div>
-</section>
+    </section>
 
-<!-- Cara Kerja Section -->
-<section class="bg-gray-100 py-20" id="cara-kerja">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Cara Kerja Fotoin</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-white p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition duration-300">
-        <div class="text-primary text-5xl mb-4">📸</div>
-        <h3 class="text-xl font-semibold mb-2">Pilih Fotografer</h3>
-        <p class="text-gray-600">Jelajahi daftar fotografer profesional sesuai kebutuhan dan lokasi kamu.</p>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition duration-300">
-        <div class="text-primary text-5xl mb-4">📅</div>
-        <h3 class="text-xl font-semibold mb-2">Booking Jadwal</h3>
-        <p class="text-gray-600">Pilih waktu yang kamu inginkan dan langsung lakukan reservasi.</p>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow-md text-center hover:shadow-xl transition duration-300">
-        <div class="text-primary text-5xl mb-4">📥</div>
-        <h3 class="text-xl font-semibold mb-2">Dapatkan Hasilnya</h3>
-        <p class="text-gray-600">Nikmati hasil foto berkualitas tinggi langsung dari fotografer pilihanmu.</p>
-      </div>
+    <!-- CTA Booking Section -->
+    <section class="bg-accent py-20 text-white">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Siap Abadikan Momenmu?</h2>
+        <p class="mb-8 text-lg">Jadwalkan sesi pemotretanmu hari ini dan temukan fotografer terbaik dengan mudah!</p>
+        <a href="#" class="bg-white text-accent font-bold px-8 py-3 rounded-full shadow-lg hover:bg-gray-200 transition duration-300">Booking Sekarang</a>
     </div>
-  </div>
-</section>
+    </section>
 
-<!-- CTA Booking Section -->
-<section class="bg-accent py-20 text-white">
-  <div class="container mx-auto px-4 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-6">Siap Abadikan Momenmu?</h2>
-    <p class="mb-8 text-lg">Jadwalkan sesi pemotretanmu hari ini dan temukan fotografer terbaik dengan mudah!</p>
-    <a href="#" class="bg-white text-accent font-bold px-8 py-3 rounded-full shadow-lg hover:bg-gray-200 transition duration-300">Booking Sekarang</a>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-gray-900 text-white py-10">
-  <div class="container mx-auto px-4">
-    <div class="flex flex-col md:flex-row justify-between items-center">
-      <p class="text-sm">&copy; 2025 Fotoin. All rights reserved.</p>
-      <div class="flex space-x-6 mt-4 md:mt-0">
-        <a href="#" class="hover:text-primary transition">Privacy Policy</a>
-        <a href="#" class="hover:text-primary transition">Terms of Service</a>
-        <a href="#" class="hover:text-primary transition">Kontak</a>
-      </div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-sm">&copy; 2025 Fotoin. All rights reserved.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" class="hover:text-primary transition">Privacy Policy</a>
+            <a href="#" class="hover:text-primary transition">Terms of Service</a>
+            <a href="#" class="hover:text-primary transition">Kontak</a>
+        </div>
+        </div>
     </div>
-  </div>
-</footer>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+</body>
+</html>
