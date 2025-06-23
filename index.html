@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotoin - Booking Fotografer Profesional Dalam Sekejap</title>
+    <title>Fotoin - Revolusi Booking Fotografer Segera Hadir</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
@@ -21,10 +20,10 @@
                         montserrat: ['Montserrat', 'sans-serif'],
                     },
                     colors: {
-                        primary: '#1E40AF', // Deeper blue for professional look
+                        primary: '#1E40AF',
                         primaryLight: '#60A5FA',
                         primaryDark: '#1E3A8A',
-                        accent: '#F59E0B', // Warmer orange for photography feel
+                        accent: '#F59E0B',
                         accentLight: '#FBBF24',
                         dark: '#111827',
                         light: '#F9FAFB',
@@ -68,7 +67,6 @@
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        /* Custom animations */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -76,21 +74,19 @@
         .animate-fadeIn {
             animation: fadeIn 0.6s ease forwards;
         }
-        .nav-link {
-            position: relative;
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: #1E40AF;
-            transition: width 0.3s ease;
+        .animate-pulse-slow {
+            animation: pulse 3s ease-in-out infinite;
         }
-        .nav-link:hover:after {
-            width: 100%;
+        .countdown-item {
+            background: linear-gradient(135deg, #1E40AF, #60A5FA);
+            border-radius: 12px;
+            padding: 1rem;
+            color: white;
+            min-width: 80px;
         }
     </style>
 </head>
@@ -103,13 +99,13 @@
                     <div class="text-3xl font-bold">
                         <span class="text-primary">Foto</span><span class="text-accent">in</span>
                     </div>
-                    <span class="hidden md:block text-xs bg-accent text-white px-2 py-1 rounded-md">Beta</span>
+                    <span class="bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">Coming Soon</span>
                 </a>
                 
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
@@ -117,27 +113,25 @@
                 
                 <!-- Desktop menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a class="nav-link hover:text-primary transition-colors" href="#features">Fitur</a>
-                    <a class="nav-link hover:text-primary transition-colors" href="#how-it-works">Cara Kerja</a>
-                    <a class="nav-link hover:text-primary transition-colors" href="#testimonials">Testimoni</a>
-                    <a class="nav-link hover:text-primary transition-colors" href="#promo">Promo</a>
-                    <a href="#" class="bg-primary hover:bg-primaryDark text-white font-medium py-2 px-5 rounded-full transition-colors shadow-btn hover:shadow-lg">Booking</a>
+                    <a class="hover:text-primary transition-colors" href="#features">Fitur</a>
+                    <a class="hover:text-primary transition-colors" href="#feedback">Testimoni</a>
+                    <a class="hover:text-primary transition-colors" href="#notify">Notify Me</a>
+                    <a href="#notify" class="bg-primary hover:bg-primaryDark text-white font-medium py-2 px-5 rounded-full transition-colors shadow-btn hover:shadow-lg">Daftar Sekarang</a>
                 </div>
             </div>
             
-            <!-- Mobile menu (hidden by default) -->
+            <!-- Mobile menu -->
             <div id="mobile-menu" class="md:hidden hidden pt-4 pb-2">
                 <a class="block py-2 hover:text-primary transition-colors" href="#features">Fitur</a>
-                <a class="block py-2 hover:text-primary transition-colors" href="#how-it-works">Cara Kerja</a>
-                <a class="block py-2 hover:text-primary transition-colors" href="#testimonials">Testimoni</a>
-                <a class="block py-2 hover:text-primary transition-colors" href="#promo">Promo</a>
-                <a href="https://fotoin-l8in.onrender.com/" class="block mt-3 bg-primary text-white font-medium py-2 px-4 rounded-full text-center">Booking Sekarang</a>
+                <a class="block py-2 hover:text-primary transition-colors" href="#feedback">Testimoni</a>
+                <a class="block py-2 hover:text-primary transition-colors" href="#notify">Notify Me</a>
+                <a href="#notify" class="block mt-3 bg-primary text-white font-medium py-2 px-4 rounded-full text-center">Daftar Sekarang</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 z-10 bg-gradient-to-br from-primary/5 to-primary/20 relative overflow-hidden">
+    <section class="pt-32 pb-20 bg-gradient-to-br from-primary/5 to-primary/20 relative overflow-hidden">
         <!-- Abstract design elements -->
         <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-accent/10 filter blur-3xl"></div>
         <div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-96 h-96 rounded-full bg-primary/10 filter blur-3xl"></div>
@@ -145,25 +139,46 @@
         <div class="container mx-auto px-4 relative z-10">
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 mb-10 lg:mb-0 animate-fadeIn">
-                    <div class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full mb-6 font-medium text-sm">
-                        #JelajahiDuniaMelaluiLensa
+                    <div class="inline-block px-4 py-2 bg-accent text-white rounded-full mb-6 font-medium text-sm animate-pulse-slow">
+                        🚀 Segera Hadir - Q2 2025
                     </div>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                        Booking Fotografer Profesional <span class="text-primary">Dalam Sekejap</span>
+                        Revolusi Cara Booking <span class="text-primary">Fotografer Profesional</span>
                     </h1>
-                    <p class="text-lg text-gray-600 mb-8 md:pr-12">Cari, pilih, dan pesan fotografer sesuai gaya dan budget Anda dengan mudah. Abadikan momen berharga dengan sentuhan profesional.</p>
+                    <p class="text-lg text-gray-600 mb-8 md:pr-12">Platform pertama di Indonesia yang menghubungkan Anda dengan fotografer terbaik dalam sekali klik. Sistem booking yang aman, transparan, dan mudah digunakan.</p>
+                    
+                    <!-- Countdown Timer -->
+                    <div class="mb-8">
+                        <p class="text-sm text-gray-500 mb-3 font-medium">PERKIRAAN LAUNCHING:</p>
+                        <div class="flex space-x-4" id="countdown">
+                            <div class="countdown-item text-center">
+                                <div class="text-2xl font-bold" id="days">90</div>
+                                <div class="text-xs opacity-80">Hari</div>
+                            </div>
+                            <div class="countdown-item text-center">
+                                <div class="text-2xl font-bold" id="hours">12</div>
+                                <div class="text-xs opacity-80">Jam</div>
+                            </div>
+                            <div class="countdown-item text-center">
+                                <div class="text-2xl font-bold" id="minutes">30</div>
+                                <div class="text-xs opacity-80">Menit</div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                        <a href="https://fotoin-l8in.onrender.com/" class="bg-primary hover:bg-primaryDark text-white font-medium py-3 px-8 rounded-full transition-colors shadow-btn hover:shadow-lg flex items-center justify-center">
-                            <span>Booking Sekarang</span>
+                        <a href="#notify" class="bg-primary hover:bg-primaryDark text-white font-medium py-3 px-8 rounded-full transition-colors shadow-btn hover:shadow-lg flex items-center justify-center">
+                            <span>Dapatkan Notifikasi</span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                             </svg>
                         </a>
-                        <a href="#how-it-works" class="border-2 border-primary text-primary hover:bg-primary hover:text-white font-medium py-3 px-8 rounded-full transition-colors flex items-center justify-center">
+                        <a href="#features" class="border-2 border-primary text-primary hover:bg-primary hover:text-white font-medium py-3 px-8 rounded-full transition-colors flex items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
                             </svg>
-                            <span>Cara Kerja</span>
+                            <span>Pelajari Lebih Lanjut</span>
                         </a>
                     </div>
                     
@@ -171,64 +186,77 @@
                     <div class="mt-12 flex flex-wrap -m-2">
                         <div class="p-2">
                             <div class="bg-white px-4 py-2 rounded-lg shadow">
-                                <p class="text-xs text-gray-500">Fotografer Aktif</p>
+                                <p class="text-xs text-gray-500">Fotografer Tertarik</p>
+                                <p class="text-2xl font-bold text-primary">350+</p>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <div class="bg-white px-4 py-2 rounded-lg shadow">
+                                <p class="text-xs text-gray-500">Early Adopters</p>
                                 <p class="text-2xl font-bold text-primary">1,200+</p>
                             </div>
                         </div>
                         <div class="p-2">
                             <div class="bg-white px-4 py-2 rounded-lg shadow">
-                                <p class="text-xs text-gray-500">Kota di Indonesia</p>
-                                <p class="text-2xl font-bold text-primary">24+</p>
-                            </div>
-                        </div>
-                        <div class="p-2">
-                            <div class="bg-white px-4 py-2 rounded-lg shadow">
-                                <p class="text-xs text-gray-500">Momen Terabadikan</p>
-                                <p class="text-2xl font-bold text-primary">15K+</p>
+                                <p class="text-xs text-gray-500">Kota Target</p>
+                                <p class="text-2xl font-bold text-primary">15+</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="lg:w-1/2 relative animate-fadeIn" style="animation-delay: 1s;">
                     <div class="relative z-10">
-                        <img src="https://i.pinimg.com/736x/f0/70/c7/f070c7958f5e2d99948436fde09839ed.jpg" class="rounded-xl shadow-xl w-full" alt="Fotoin App Demo">
+                        <img src="https://i.pinimg.com/736x/f0/70/c7/f070c7958f5e2d99948436fde09839ed.jpg" class="rounded-xl shadow-xl w-full opacity-90" alt="Fotoin App Preview">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-xl"></div>
                     </div>
                     <!-- Decorative elements -->
                     <div class="absolute top-4 right-4 bg-accent px-3 py-2 rounded-lg shadow-lg z-20">
                         <div class="flex items-center space-x-2">
-                        <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
-                            <i class="fas fa-star text-accent text-xs"></i>
+                            <div class="w-5 h-5 bg-white rounded-full flex items-center justify-center">
+                                <i class="fas fa-star text-accent text-xs"></i>
+                            </div>
+                            <span class="text-white text-sm font-medium">Coming Soon</span>
                         </div>
-                        <span class="text-white text-sm font-medium">4.9/5.0 Rating</span>
                     </div>
-
-                    </div>
-                    <div class="absolute bottom-10 lg:-left-6 md: -left-5 bg-white p-3 rounded-lg shadow-lg z-20 animate-bounce md-h-10" style="animation-duration: 3s">
+                    <div class="absolute bottom-10 -left-6 bg-white p-3 rounded-lg shadow-lg z-20 animate-bounce" style="animation-duration: 3s">
                         <div class="flex items-center space-x-2">
-                            <i class="fas fa-camera text-primary"></i>
-                            <span class="font-medium">Booking Instan</span>
+                            <i class="fas fa-rocket text-primary"></i>
+                            <span class="font-medium">Beta Testing</span>
                         </div>
                     </div>
-                    <!-- Background decorative elements -->
-                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent/20 rounded-full filter blur-xl -z-10"></div>
-                    <div class="absolute bottom-0 right-0 w-32 h-32 bg-primary/30 rounded-full filter blur-xl -z-10"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trusted By Section -->
-    <section class="py-10 bg-white">
+    <!-- Research Insight -->
+    <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-2">
-                <p class="text-gray-500 font-medium">DIPERCAYA OLEH</p>
-            </div>
-            <div class="flex flex-wrap justify-center items-center">
-                <div class="p-2 grayscale hover:grayscale-0 transition-all">
-                    <img src="https://pbs.twimg.com/profile_images/1656207237801705473/1_E-FKq7_400x400.jpg" alt="Brand Logo" class="h-40">
+            <div class="text-center mb-12">
+                <div class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full mb-4 font-medium text-sm">
+                    BERDASARKAN RISET
                 </div>
-                <div class="p-2 grayscale hover:grayscale-0 transition-all">
-                    <img src="3.png" alt="Brand Logo" class="h-40">
+                <h2 class="text-3xl font-bold mb-4">Kami Dengarkan <span class="text-primary">Kebutuhan Anda</span></h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Melalui wawancara mendalam dengan 200+ customer dan 150+ fotografer di seluruh Indonesia</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-red-50 rounded-xl">
+                    <div class="text-4xl mb-4">😤</div>
+                    <h4 class="font-semibold text-lg mb-2">Proses Mencari Ribet</h4>
+                    <p class="text-gray-600">85% kesulitan menemukan fotografer yang sesuai budget dan style</p>
+                </div>
+                
+                <div class="text-center p-6 bg-yellow-50 rounded-xl">
+                    <div class="text-4xl mb-4">💸</div>
+                    <h4 class="font-semibold text-lg mb-2">Harga Tidak Transparan</h4>
+                    <p class="text-gray-600">78% merasa bingung dengan sistem pricing yang tidak jelas</p>
+                </div>
+                
+                <div class="text-center p-6 bg-blue-50 rounded-xl">
+                    <div class="text-4xl mb-4">⏰</div>
+                    <h4 class="font-semibold text-lg mb-2">Booking Lama</h4>
+                    <p class="text-gray-600">Rata-rata butuh 7-14 hari untuk finalisasi booking</p>
                 </div>
             </div>
         </div>
@@ -239,10 +267,10 @@
         <div class="container mx-auto px-4">
             <div class="text-center mb-16 max-w-3xl mx-auto">
                 <div class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full mb-4 font-medium text-sm">
-                    FITUR UTAMA
+                    SOLUSI KAMI
                 </div>
-                <h2 class="text-3xl font-bold mb-4">Kenapa Harus Menggunakan <span class="text-primary">Foto</span><span class="text-accent">in</span>?</h2>
-                <p class="text-lg text-gray-600">Nikmati kemudahan dan kenyamanan dalam memesan jasa fotografer profesional dengan berbagai fitur unggulan</p>
+                <h2 class="text-3xl font-bold mb-4">Fitur Yang Akan <span class="text-primary">Mengubah Segalanya</span></h2>
+                <p class="text-lg text-gray-600">Platform yang dirancang khusus berdasarkan pain points yang ditemukan dari riset mendalam</p>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -251,300 +279,435 @@
                     <div class="inline-flex items-center justify-center w-20 h-20 bg-primary/10 text-primary rounded-full mb-6">
                         <i class="fas fa-search text-2xl"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-3">Cari Fotografer Terdekat</h4>
-                    <p class="text-gray-600">Temukan fotografer berkualitas di sekitar Anda sesuai gaya fotografi yang diinginkan dengan filter pencarian canggih</p>
-                  
+                    <h4 class="text-xl font-semibold mb-3">Smart Matching</h4>
+                    <p class="text-gray-600">AI-powered matching system yang mencocokkan Anda dengan fotografer berdasarkan preferensi, budget, dan style</p>
                 </div>
                 
                 <!-- Feature 2 -->
                 <div class="feature-card bg-white p-8 rounded-xl shadow-card text-center">
                     <div class="inline-flex items-center justify-center w-20 h-20 bg-primary/10 text-primary rounded-full mb-6">
-                        <i class="fas fa-credit-card text-2xl"></i>
+                        <i class="fas fa-shield-alt text-2xl"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-3">Pembayaran Aman</h4>
-                    <p class="text-gray-600">Sistem escrow menjamin keamanan pembayaran Anda hingga layanan selesai diterima dengan berbagai metode pembayaran</p>
-                  
+                    <h4 class="text-xl font-semibold mb-3">Sistem Escrow</h4>
+                    <p class="text-gray-600">Pembayaran 100% aman dengan sistem escrow. Uang baru diteruskan setelah hasil foto diterima</p>
                 </div>
                 
                 <!-- Feature 3 -->
                 <div class="feature-card bg-white p-8 rounded-xl shadow-card text-center">
                     <div class="inline-flex items-center justify-center w-20 h-20 bg-primary/10 text-primary rounded-full mb-6">
-                        <i class="fas fa-star text-2xl"></i>
+                        <i class="fas fa-bolt text-2xl"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-3">Ulasan Jujur & Portofolio</h4>
-                    <p class="text-gray-600">Lihat portofolio lengkap dan baca ulasan terverifikasi dari pengguna sebelum memutuskan fotografer pilihan</p>
-                   
+                    <h4 class="text-xl font-semibold mb-3">Instant Booking</h4>
+                    <p class="text-gray-600">Booking konfirmasi dalam hitungan menit, bukan hari. Real-time availability fotografer</p>
                 </div>
                 
                 <!-- Feature 4 -->
                 <div class="feature-card bg-white p-8 rounded-xl shadow-card text-center">
                     <div class="inline-flex items-center justify-center w-20 h-20 bg-primary/10 text-primary rounded-full mb-6">
-                        <i class="fas fa-comments text-2xl"></i>
+                        <i class="fas fa-eye text-2xl"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-3">Chat Langsung</h4>
-                    <p class="text-gray-600">Diskusikan detail sesi foto langsung dengan fotografer pilihan Anda melalui platform chat yang aman dan cepat</p>
-                  
+                    <h4 class="text-xl font-semibold mb-3">Harga Transparan</h4>
+                    <p class="text-gray-600">Lihat harga fixed untuk setiap paket tanpa hidden cost. Apa yang tertera adalah apa yang dibayar</p>
                 </div>
                 
                 <!-- Feature 5 -->
                 <div class="feature-card bg-white p-8 rounded-xl shadow-card text-center">
                     <div class="inline-flex items-center justify-center w-20 h-20 bg-primary/10 text-primary rounded-full mb-6">
-                        <i class="fas fa-camera text-2xl"></i>
+                        <i class="fas fa-star text-2xl"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-3">Layanan Foto Lengkap</h4>
-                    <p class="text-gray-600">Tersedia berbagai layanan fotografi mulai dari wisuda, prewedding, event, produk, keluarga hingga foto profil profesional</p>
-                   
+                    <h4 class="text-xl font-semibold mb-3">Review Terverifikasi</h4>
+                    <p class="text-gray-600">Sistem review yang hanya bisa dilakukan setelah sesi foto selesai. Jamin review authentic</p>
                 </div>
                 
                 <!-- Feature 6 -->
                 <div class="feature-card bg-white p-8 rounded-xl shadow-card text-center">
                     <div class="inline-flex items-center justify-center w-20 h-20 bg-primary/10 text-primary rounded-full mb-6">
-                        <i class="fas fa-clock text-2xl"></i>
+                        <i class="fas fa-mobile-alt text-2xl"></i>
                     </div>
-                    <h4 class="text-xl font-semibold mb-3">Booking Instan</h4>
-                    <p class="text-gray-600">Proses booking cepat dengan konfirmasi instan tanpa perlu menunggu lama dan dapat disesuaikan dengan jadwal Anda</p>
+                    <h4 class="text-xl font-semibold mb-3">Mobile First</h4>
+                    <p class="text-gray-600">Aplikasi mobile yang user-friendly. Kelola booking, chat, dan download foto langsung dari HP</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Early Feedback Section -->
+    <section id="feedback" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <div class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full mb-4 font-medium text-sm">
+                    FEEDBACK AWAL
+                </div>
+                <h2 class="text-3xl font-bold mb-4">Apa Kata <span class="text-primary">Mereka</span>?</h2>
+                <p class="text-lg text-gray-600">Respons positif dari fotografer dan calon pengguna yang sudah melihat preview produk kami</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Customer Feedback -->
+                <div class="bg-gray-50 p-6 rounded-2xl shadow">
+                    <div class="flex items-center mb-4">
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">Customer</span>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"Konsep ini exactly yang saya butuhkan! Selama ini susah banget cari fotografer yang sesuai budget dan available di tanggal yang kita mau."</p>
+                    <div class="flex items-center">
+                        <img src="https://i.pravatar.cc/40?img=5" class="rounded-full w-10 h-10 mr-3" />
+                        <div>
+                            <p class="font-semibold">Nadya Aulia</p>
+                            <p class="text-sm text-gray-500">Marketing Manager</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photographer Feedback -->
+                <div class="bg-gray-50 p-6 rounded-2xl shadow">
+                    <div class="flex items-center mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">Fotografer</span>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"Platform kayak gini yang fotografer freelance butuhin. Gak perlu lagi repot marketing sendiri dan dealing dengan payment yang ribet."</p>
+                    <div class="flex items-center">
+                        <img src="https://i.pravatar.cc/40?img=32" class="rounded-full w-10 h-10 mr-3" />
+                        <div>
+                            <p class="font-semibold">Steven Hartanto</p>
+                            <p class="text-sm text-gray-500">Professional Photographer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Early Adopter -->
+                <div class="bg-gray-50 p-6 rounded-2xl shadow">
+                    <div class="flex items-center mb-4">
+                        <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-medium">Early Adopter</span>
+                    </div>
+                    <p class="text-gray-700 italic mb-4">"UI/UX nya clean banget dan fitur-fiturnya solve semua masalah yang selama ini ada di industri photography booking."</p>
+                    <div class="flex items-center">
+                        <img src="https://i.pravatar.cc/40?img=11" class="rounded-full w-10 h-10 mr-3" />
+                        <div>
+                            <p class="font-semibold">Jonathan Pranata</p>
+                            <p class="text-sm text-gray-500">Tech Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notification Sign-up Section -->
+    <section id="notify" class="py-20 bg-gradient-to-br from-primary to-primaryDark text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Jangan Sampai Ketinggalan!</h2>
+                <p class="text-xl mb-8 opacity-90">Jadilah yang pertama tahu ketika Fotoin officially launching. Dapatkan early bird discount hingga 50%!</p>
+                
+                <!-- Sign-up Form -->
+                <div class="bg-white rounded-2xl p-8 max-w-2xl mx-auto shadow-2xl">
+                    <form class="space-y-4" id="notifyForm">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <input 
+                                type="text" 
+                                placeholder="Nama Lengkap" 
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none text-gray-700"
+                                required
+                            >
+                            <input 
+                                type="email" 
+                                placeholder="Email Address" 
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none text-gray-700"
+                                required
+                            >
+                        </div>
+                        <input 
+                            type="tel" 
+                            placeholder="Nomor WhatsApp" 
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none text-gray-700"
+                            required
+                        >
+                        <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none text-gray-700" required>
+                            <option value="">Saya tertarik sebagai...</option>
+                            <option value="customer">Customer - Ingin booking fotografer</option>
+                            <option value="photographer">Fotografer - Ingin join platform</option>
+                            <option value="both">Keduanya</option>
+                        </select>
+                        
+                        <!-- Bonus: Location -->
+                        <input 
+                            type="text" 
+                            placeholder="Kota Anda (Opsional)" 
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:outline-none text-gray-700"
+                        >
+                        
+                        <button 
+                            type="submit" 
+                            class="w-full bg-primary hover:bg-primaryDark text-white font-semibold py-4 px-8 rounded-lg transition-colors shadow-lg hover:shadow-xl transform hover:scale-105"
+                        >
+                            🚀 Notify Me When It's Ready!
+                        </button>
+                    </form>
                     
+                    <div class="mt-6 flex items-center justify-center space-x-6 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-gift text-accent mr-2"></i>
+                            <span>Early Bird Discount</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-crown text-accent mr-2"></i>
+                            <span>Beta Access</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-lock text-accent mr-2"></i>
+                            <span>No Spam</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Proof -->
+                <div class="mt-12 flex justify-center items-center space-x-8 opacity-80">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold">1,547</div>
+                        <div class="text-sm">Sudah mendaftar</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold">350+</div>
+                        <div class="text-sm">Fotografer tertarik</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold">15+</div>
+                        <div class="text-sm">Kota siap</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Categories Section -->
-    <section class="py-20 bg-white">
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16 max-w-3xl mx-auto">
+            <div class="text-center mb-16">
                 <div class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full mb-4 font-medium text-sm">
-                    KATEGORI FOTOGRAFI
+                    FAQ
                 </div>
-                <h2 class="text-3xl font-bold mb-4">Layanan Fotografi untuk <span class="text-primary">Setiap Momen</span></h2>
-                <p class="text-lg text-gray-600">Temukan jenis layanan fotografi yang sesuai dengan kebutuhan Anda</p>
+                <h2 class="text-3xl font-bold mb-4">Pertanyaan <span class="text-primary">Yang Sering Ditanyakan</span></h2>
+                <p class="text-lg text-gray-600">Temukan jawaban untuk pertanyaan yang paling sering diajukan</p>
             </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                <!-- Category 1 -->
-                <div class="group hover-scale">
-                    <div class="relative rounded-xl overflow-hidden aspect-square shadow">
-                        <img src="https://i.pinimg.com/736x/f8/cf/ae/f8cfaecd2f9cd01a8d04f8be670990d5.jpg" alt="Wedding Photography" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-dark/0"></div>
-                        <div class="absolute bottom-0 left-0 p-4 text-white">
-                            <h4 class="font-semibold">Wedding</h4>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Category 2 -->
-                <div class="group hover-scale">
-                    <div class="relative rounded-xl overflow-hidden aspect-square shadow">
-                        <img src="https://i.pinimg.com/736x/e4/25/0e/e4250e33b80e39b41cec68a6c79f62d5.jpg" alt="Graduation Photography" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-dark/0"></div>
-                        <div class="absolute bottom-0 left-0 p-4 text-white">
-                            <h4 class="font-semibold">Wisuda</h4>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Category 3 -->
-                <div class="group hover-scale">
-                    <div class="relative rounded-xl overflow-hidden aspect-square shadow">
-                        <img src="https://i.pinimg.com/736x/55/f3/94/55f394aeccc01051ce97f761eb8f45d0.jpg" alt="Product Photography" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-dark/0"></div>
-                        <div class="absolute bottom-0 left-0 p-4 text-white">
-                            <h4 class="font-semibold">Produk</h4>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Category 4 -->
-                <div class="group hover-scale">
-                    <div class="relative rounded-xl overflow-hidden aspect-square shadow">
-                        <img src="https://i.pinimg.com/736x/f9/f1/7b/f9f17bc72e5707cee35cf7f676cdac94.jpg" alt="Family Photography" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-dark/0"></div>
-                        <div class="absolute bottom-0 left-0 p-4 text-white">
-                            <h4 class="font-semibold">Keluarga</h4>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Category 5 -->
-                <div class="group hover-scale">
-                    <div class="relative rounded-xl overflow-hidden aspect-square shadow">
-                        <img src="https://i.pinimg.com/736x/c6/32/64/c63264ce8535800623e10d126dffe40a.jpg" alt="Event Photography" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-dark/0"></div>
-                        <div class="absolute bottom-0 left-0 p-4 text-white">
-                            <h4 class="font-semibold">Event</h4>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Category 6 -->
-                <div class="group hover-scale">
-                    <div class="relative rounded-xl overflow-hidden aspect-square shadow">
-                        <img src="https://i.pinimg.com/736x/f0/ad/59/f0ad59f31fd6a280a90b736e2d1769cc.jpg" alt="Portrait Photography" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-dark/0"></div>
-                        <div class="absolute bottom-0 left-0 p-4 text-white">
-                            <h4 class="font-semibold">Portrait</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="py-20 bg-gradient-to-br from-primary/5 to-primary/10">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16 max-w-3xl mx-auto">
-                <div class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full mb-4 font-medium text-sm">
-                    CARA KERJA
-                </div>
-                <h2 class="text-3xl font-bold mb-4">Booking Fotografer <span class="text-primary">Semudah 1-2-3</span></h2>
-                <p class="text-lg text-gray-600">Prosesnya sederhana dan cepat, tanpa perlu repot mencari dan negosiasi di platform lain</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8 relative">
-                <!-- Step connector line -->
-                <div class="hidden md:block absolute top-1/3 left-0 right-0 h-0.5 bg-primary/20"></div>
-                
-                <!-- Step 1 -->
-                <div class="relative">
-                    <div class="bg-white p-8 rounded-xl shadow-lg text-center hover-scale">
-                        <div class="inline-flex items-center justify-center w-16 h-16 bg-primary text-white rounded-full mb-6 shadow-lg z-10 relative">
-                            <span class="text-xl font-bold">1</span>
-                        </div>
-                        <h4 class="text-xl font-semibold mb-3">Cari Fotografer</h4>
-                        <p class="text-gray-600">Pilih berdasarkan lokasi, kategori, jenis sesi foto, dan gaya visual yang Anda inginkan</p>
-                        <!-- <img src="https://via.placeholder.com/250x150" alt="Search for Photographer" class="mt-6 mx-auto rounded-lg"> -->
-                    </div>
-                    <!-- Mobile arrow -->
-                    <div class="flex justify-center md:hidden mt-4">
-                        <i class="fas fa-arrow-down text-2xl text-primary"></i>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-white rounded-lg shadow-sm border">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(this)">
+                        <span class="font-semibold">Kapan Fotoin akan officially launching?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-600">Kami menargetkan soft launch pada Q2 2025 (April-Juni). Timeline ini memungkinkan kami untuk menyelesaikan development, testing, dan onboarding fotografer di kota-kota besar.</p>
                     </div>
                 </div>
-                
-                <!-- Step 2 -->
-                <div class="relative">
-                    <div class="bg-white p-8 rounded-xl shadow-lg text-center hover-scale">
-                        <div class="inline-flex items-center justify-center w-16 h-16 bg-primary text-white rounded-full mb-6 shadow-lg z-10 relative">
-                            <span class="text-xl font-bold">2</span>
-                        </div>
-                        <h4 class="text-xl font-semibold mb-3">Pesan & Bayar Aman</h4>
-                        <p class="text-gray-600">Konfirmasi tanggal, diskusikan konsep, dan lakukan pembayaran aman melalui sistem escrow</p>
-                        <!-- <img src="" alt="Book and Pay Securely" class="mt-6 mx-auto rounded-lg"> -->
-                    </div>
-                    <!-- Mobile arrow -->
-                    <div class="flex justify-center md:hidden mt-4">
-                        <i class="fas fa-arrow-down text-2xl text-primary"></i>
+
+                <div class="bg-white rounded-lg shadow-sm border">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(this)">
+                        <span class="font-semibold">Apakah gratis untuk customer?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-600">Ya! Fotoin gratis untuk customer. Kami hanya mengenakan service fee kecil kepada fotografer (sekitar 10-15%) untuk maintenance platform dan customer support.</p>
                     </div>
                 </div>
-                
-                <!-- Step 3 -->
-                <div class="relative">
-                    <div class="bg-white p-8 rounded-xl shadow-lg text-center hover-scale">
-                        <div class="inline-flex items-center justify-center w-16 h-16 bg-primary text-white rounded-full mb-6 shadow-lg z-10 relative">
-                            <span class="text-xl font-bold">3</span>
-                        </div>
-                        <h4 class="text-xl font-semibold mb-3">Foto & Terima Hasil</h4>
-                        <p class="text-gray-600">Nikmati sesi foto, review hasil, dan download file dengan kualitas tinggi lewat aplikasi</p>
-                        <!-- <img src="https://via.placeholder.com/250x150" alt="Get Your Photos" class="mt-6 mx-auto rounded-lg"> -->
+
+                <div class="bg-white rounded-lg shadow-sm border">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(this)">
+                        <span class="font-semibold">Bagaimana sistem keamanan pembayaran?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-600">Kami menggunakan sistem escrow dimana pembayaran di-hold sampai sesi foto selesai dan hasil diterima customer. Integrated dengan payment gateway terpercaya seperti Midtrans untuk keamanan maksimal.</p>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Additional note -->
-            <div class="text-center mt-12">
-                <div class="inline-block bg-white px-6 py-3 rounded-full shadow-md">
-                    <p class="text-gray-700 font-medium">Proses yang menyenangkan dari awal hingga akhir ✨</p>
+
+                <div class="bg-white rounded-lg shadow-sm border">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(this)">
+                        <span class="font-semibold">Kota mana saja yang akan tersedia saat launch?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-600">Priority launch: Jakarta, Bandung, Surabaya, Medan, Makassar, Yogyakarta, Semarang, Palembang. Kota lainnya akan follow setelah sistem stabil dan demand terbukti.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm border">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(this)">
+                        <span class="font-semibold">Bagaimana cara fotografer join platform?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-600">Fotografer bisa mendaftar melalui form di atas dengan memilih opsi "Fotografer". Akan ada proses verifikasi portfolio dan background check untuk menjaga kualitas service.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm border">
+                    <button class="faq-toggle w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50" onclick="toggleFAQ(this)">
+                        <span class="font-semibold">Apakah bisa cancel booking?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-600">Ya, dengan kebijakan cancellation yang fair. Cancel 24+ jam sebelum sesi: full refund. Cancel kurang dari 24 jam: refund 50%. Emergency cancellation akan ditangani case by case.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <!-- Testimonial Section -->
-    <section class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">Apa Kata Mereka?</h2>
-
-        <div class="grid md:grid-cols-3 gap-8">
-        <!-- Testimonial Card -->
-        <div class="bg-gray-50 p-6 rounded-2xl shadow">
-            <p class="text-gray-700 italic">"Pelayanan fotografernya cepat dan hasil fotonya keren banget! Aku bakal order lagi buat acara keluarga nanti."</p>
-            <div class="mt-4 flex items-center">
-            <img src="https://i.pravatar.cc/40?img=5" class="rounded-full w-10 h-10 mr-3" />
-            <div>
-                <p class="font-semibold">Nadya Aulia</p>
-                <p class="text-sm text-gray-500">Customer</p>
-            </div>
-            </div>
-        </div>
-
-        <div class="bg-gray-50 p-6 rounded-2xl shadow">
-            <p class="text-gray-700 italic">"Platform ini bantu aku dapet client terus tiap bulan. Simple banget cara setting paketnya."</p>
-            <div class="mt-4 flex items-center">
-            <img src="https://i.pravatar.cc/40?img=32" class="rounded-full w-10 h-10 mr-3" />
-            <div>
-                <p class="font-semibold">Steven Hartanto</p>
-                <p class="text-sm text-gray-500">Fotografer</p>
-            </div>
-            </div>
-        </div>
-
-        <div class="bg-gray-50 p-6 rounded-2xl shadow">
-            <p class="text-gray-700 italic">"Sistem booking dan negosiasinya bikin semuanya transparan. Gak perlu bolak-balik chat panjang lebar."</p>
-            <div class="mt-4 flex items-center">
-            <img src="https://i.pravatar.cc/40?img=11" class="rounded-full w-10 h-10 mr-3" />
-            <div>
-                <p class="font-semibold">Jonathan Pranata</p>
-                <p class="text-sm text-gray-500">Customer</p>
-            </div>
-            </div>
-        </div>
-        </div>
-    </div>
-    </section>
-    <!-- Quick Stats Section -->
-    <section class="bg-white py-16">
-    <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-        <div>
-            <h3 class="text-4xl font-bold text-primary">150+</h3>
-            <p class="text-gray-600 mt-2">Fotografer Tergabung</p>
-        </div>
-        <div>
-            <h3 class="text-4xl font-bold text-primary">1.200+</h3>
-            <p class="text-gray-600 mt-2">Pemotretan Berhasil</p>
-        </div>
-        <div>
-            <h3 class="text-4xl font-bold text-primary">4.9/5</h3>
-            <p class="text-gray-600 mt-2">Rating Pelanggan</p>
-        </div>
-        </div>
-    </div>
-    </section>
-
-    <!-- CTA Booking Section -->
-    <section class="bg-accent py-20 text-white">
-    <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">Siap Abadikan Momenmu?</h2>
-        <p class="mb-8 text-lg">Jadwalkan sesi pemotretanmu hari ini dan temukan fotografer terbaik dengan mudah!</p>
-        <a href="https://fotoin-l8in.onrender.com/" class="bg-white text-accent font-bold px-8 py-3 rounded-full shadow-lg hover:bg-gray-200 transition duration-300">Booking Sekarang</a>
-    </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-10">
-    <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-        <p class="text-sm">&copy; 2025 Fotoin. All rights reserved.</p>
-        <div class="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" class="hover:text-primary transition">Privacy Policy</a>
-            <a href="#" class="hover:text-primary transition">Terms of Service</a>
-            <a href="#" class="hover:text-primary transition">Kontak</a>
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="text-2xl font-bold">
+                            <span class="text-primaryLight">Foto</span><span class="text-accent">in</span>
+                        </div>
+                        <span class="bg-accent text-white px-2 py-1 rounded-full text-xs font-medium">Coming Soon</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">Platform revolusioner untuk booking fotografer profesional dengan mudah, aman, dan transparan.</p>
+                    
+                    <!-- Social Media -->
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-800 hover:bg-primary w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-primary w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-primary w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-primary w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Platform</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#features" class="hover:text-primaryLight transition-colors">Fitur</a></li>
+                        <li><a href="#feedback" class="hover:text-primaryLight transition-colors">Testimoni</a></li>
+                        <li><a href="#notify" class="hover:text-primaryLight transition-colors">Early Access</a></li>
+                        <li><a href="#" class="hover:text-primaryLight transition-colors">Beta Testing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-primaryLight transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-primaryLight transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-primaryLight transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-primaryLight transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Fotoin. All rights reserved. Made with ❤️ for Indonesian photography community.</p>
+            </div>
         </div>
-        </div>
-    </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // Countdown Timer (Static for demo)
+        function updateCountdown() {
+            // Target date: June 1, 2025 (example)
+            const targetDate = new Date('2025-06-01T00:00:00').getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById('days').textContent = days > 0 ? days : 0;
+            document.getElementById('hours').textContent = hours > 0 ? hours : 0;
+            document.getElementById('minutes').textContent = minutes > 0 ? minutes : 0;
+        }
+
+        // Update countdown every minute
+        updateCountdown();
+        setInterval(updateCountdown, 60000);
+
+        // FAQ Toggle
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Form Submission
+        document.getElementById('notifyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would typically send the data to your backend
+            // For demo purposes, we'll just show an alert
+            alert('Terima kasih! Kami akan memberitahu Anda segera setelah Fotoin launching. 🚀');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.feature-card, .bg-gray-50 > div').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
