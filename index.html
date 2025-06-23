@@ -95,12 +95,12 @@
     <nav class="bg-white fixed w-full z-50 shadow-md transition-all duration-300" id="navbar">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <a class="flex items-center space-x-2" href="#">
-                    <div class="text-3xl font-bold">
-                        <span class="text-primary">Foto</span><span class="text-accent">in</span>
-                    </div>
-                    <span class="bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">Coming Soon</span>
-                </a>
+                <a href="#" class="flex items-center space-x-2">
+                        <img src="image.png" alt="Logo" class="h-10 w-auto">
+                        <span class="text-3xl font-bold">
+                            <span class="text-primary">Foto</span><span class="text-accent">in</span>
+                        </span>
+                    </a>
                 
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
@@ -140,7 +140,7 @@
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 mb-10 lg:mb-0 animate-fadeIn">
                     <div class="inline-block px-4 py-2 bg-accent text-white rounded-full mb-6 font-medium text-sm animate-pulse-slow">
-                        🚀 Segera Hadir - Q2 2025
+                        🚀 Segera Hadir - Q3 2025
                     </div>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                         Revolusi Cara Booking <span class="text-primary">Fotografer Profesional</span>
@@ -310,6 +310,15 @@
                     <p class="text-gray-600">Lihat harga fixed untuk setiap paket tanpa hidden cost. Apa yang tertera adalah apa yang dibayar</p>
                 </div>
                 
+                <!-- Feature 5 - Custom Package -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-card text-center">
+                    <div class="inline-flex items-center justify-center w-20 h-20 bg-primary/10 text-primary rounded-full mb-6">
+                        <i class="fas fa-handshake text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3">Custom Package</h4>
+                    <p class="text-gray-600">Butuh sesuatu yang spesial? Negotiate langsung dengan fotografer untuk paket custom sesuai kebutuhan unik Anda</p>
+                </div>
+                
                 <!-- Feature 5 -->
                 <div class="feature-card bg-white p-8 rounded-xl shadow-card text-center">
                     <div class="inline-flex items-center justify-center w-20 h-20 bg-primary/10 text-primary rounded-full mb-6">
@@ -319,14 +328,7 @@
                     <p class="text-gray-600">Sistem review yang hanya bisa dilakukan setelah sesi foto selesai. Jamin review authentic</p>
                 </div>
                 
-                <!-- Feature 6 -->
-                <div class="feature-card bg-white p-8 rounded-xl shadow-card text-center">
-                    <div class="inline-flex items-center justify-center w-20 h-20 bg-primary/10 text-primary rounded-full mb-6">
-                        <i class="fas fa-mobile-alt text-2xl"></i>
-                    </div>
-                    <h4 class="text-xl font-semibold mb-3">Mobile First</h4>
-                    <p class="text-gray-600">Aplikasi mobile yang user-friendly. Kelola booking, chat, dan download foto langsung dari HP</p>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -633,7 +635,7 @@
         // Countdown Timer (Static for demo)
         function updateCountdown() {
             // Target date: June 1, 2025 (example)
-            const targetDate = new Date('2025-06-01T00:00:00').getTime();
+            const targetDate = new Date('2026-010-01T00:00:00').getTime();
             const now = new Date().getTime();
             const difference = targetDate - now;
 
@@ -647,8 +649,8 @@
         }
 
         // Update countdown every minute
-        updateCountdown();
-        setInterval(updateCountdown, 60000);
+        // updateCountdown();
+        // setInterval(updateCountdown, 60000);
 
         // FAQ Toggle
         function toggleFAQ(button) {
